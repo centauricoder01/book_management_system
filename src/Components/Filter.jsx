@@ -10,7 +10,6 @@ const Filter = () => {
 
   const initial_category = searchParams.getAll("category");
   const initial_sort = searchParams.getAll("sort");
-  console.log(initial_sort);
 
   const [category, setCategory] = useState(initial_category || []);
 

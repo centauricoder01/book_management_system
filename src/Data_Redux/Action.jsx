@@ -24,7 +24,6 @@ const getBookfailure = () => {
 
 const Getbooks = (getbooksParams) => (dispatch) => {
   dispatch(getBookRequest());
-  console.log(getbooksParams, "GetbooksParams");
   return axios
     .get("http://localhost:8080/books", getbooksParams)
     .then((res) => {
