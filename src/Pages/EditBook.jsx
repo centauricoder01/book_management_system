@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Getbooks } from "../Data_Redux/Action";
 import { PatchRequest } from "../Auth_Redux/Action";
 
@@ -11,6 +11,7 @@ const EditBook = () => {
   const [editdata, seteditData] = useState({});
   const [nowEdit, setNowEdit] = useState("");
   const Navigater = useNavigate();
+  const Location = useLocation();
 
   useEffect(() => {
     if (getEditbook.length === 0) {
@@ -43,7 +44,7 @@ const EditBook = () => {
         onClick={() => {
           dispatch(PatchRequest({ nowEdit, params })).then(() => {
             alert("Book Name changed");
-            Navigater("/");
+            Navigater(Location.state.pathname);
           });
         }}
       >

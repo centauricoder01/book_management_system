@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const ShowBooks = ({ bookData }) => {
+  const location = useLocation();
+  console.log(location, "location of showBooks");
   const Navigate = useNavigate();
+
   return (
     <div>
       <div
@@ -26,7 +29,7 @@ const ShowBooks = ({ bookData }) => {
         <p>Release Data : {bookData.release_year}</p>
         <button
           onClick={() => {
-            Navigate(`/books/${bookData.id}/edit`);
+            Navigate(`/books/${bookData.id}/edit`, { state: location });
           }}
         >
           Edit Data
