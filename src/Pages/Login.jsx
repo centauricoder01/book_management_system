@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import { Login as LoginFunc } from "../Auth_Redux/Action";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const dispatch = useDispatch();
   const Navigater = useNavigate();
+  const Location = useLocation();
+  const GoingTo = Location.state?.pathname || "/";
 
   const HandleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
       dispatch(LoginFunc({ email, password })).then(() => {
-        Navigater("/");
+        Navigater(GoingTo, { replace: true });
       });
     }
   };

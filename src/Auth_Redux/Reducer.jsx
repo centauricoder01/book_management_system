@@ -9,7 +9,6 @@ const Initalize = {
 
 const Auth_Reducer = (oldstate = Initalize, action) => {
   const { type, Token } = action;
-  console.log(Token, "action.payload");
   switch (type) {
     case types.GET_AUTH_REQUEST:
       return { ...oldstate, isLoading: true };
