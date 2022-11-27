@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ShowBooks = ({ bookData }) => {
   return (
@@ -10,11 +11,13 @@ const ShowBooks = ({ bookData }) => {
           margin: "5px",
         }}
       >
-        <img
-          src="https://wallpaperaccess.com/full/124378.jpg"
-          alt="books"
-          width={"100%"}
-        />
+        <Link to={`/books/${bookData.id}`}>
+          <img
+            src="https://wallpaperaccess.com/full/124378.jpg"
+            alt="books"
+            width={"100%"}
+          />
+        </Link>
         <p>Book Name : {bookData.book_name}</p>
         <p>Author : {bookData.author}</p>
         <p>Category : {bookData.category}</p>
