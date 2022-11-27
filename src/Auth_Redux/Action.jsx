@@ -14,4 +14,17 @@ const Login = (payload) => (dispatch) => {
     });
 };
 
-export { Login };
+const PatchRequest = (payload) => (dispatch) => {
+  console.log(payload, "payload");
+  const parameter = {
+    book_name: payload.nowEdit,
+  };
+  return axios
+    .patch(`http://localhost:8080/books/${payload.params.id}`, parameter)
+    .then((res) => console.log(res.data))
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+export { Login, PatchRequest };

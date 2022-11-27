@@ -17,14 +17,18 @@
           "name": "CSS",
           "pages": 25
         }
-      ]
+      ],
+      "nowEdit": "Raju ki book",
+      "params": {
+        "id": "3"
+      }
     },
     {
       "id": 2,
       "no_of_chapters": 6,
       "author": "Masai",
       "cover_photo": "",
-      "book_name": "Full-Stack Web Development",
+      "book_name": "Raju ki book",
       "category": "Science_Fiction",
       "release_year": 2020,
       "chapters": [
@@ -43,7 +47,7 @@
       "no_of_chapters": 6,
       "author": "Masai",
       "cover_photo": "",
-      "book_name": "Full-Stack Web Development",
+      "book_name": "",
       "category": "Novel",
       "release_year": 2021,
       "chapters": [
@@ -55,7 +59,8 @@
           "name": "CSS",
           "pages": 25
         }
-      ]
+      ],
+      "Raju ki book": ""
     },
     {
       "id": 4,
@@ -138,7 +143,7 @@
       "no_of_chapters": 6,
       "author": "Masai",
       "cover_photo": "",
-      "book_name": "Full-Stack Web Development",
+      "book_name": "Book No 8",
       "category": "Science_Fiction",
       "release_year": 2015,
       "chapters": [
@@ -176,7 +181,7 @@
       "no_of_chapters": 6,
       "author": "Masai",
       "cover_photo": "",
-      "book_name": "Full-Stack Web Development",
+      "book_name": "book No 10",
       "category": "Motivational",
       "release_year": 2013,
       "chapters": [

@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ShowBooks = ({ bookData }) => {
+  const Navigate = useNavigate();
   return (
     <div>
       <div
@@ -22,6 +24,13 @@ const ShowBooks = ({ bookData }) => {
         <p>Author : {bookData.author}</p>
         <p>Category : {bookData.category}</p>
         <p>Release Data : {bookData.release_year}</p>
+        <button
+          onClick={() => {
+            Navigate(`/books/${bookData.id}/edit`);
+          }}
+        >
+          Edit Data
+        </button>
       </div>
     </div>
   );
